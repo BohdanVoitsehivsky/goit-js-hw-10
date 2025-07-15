@@ -1,32 +1,94 @@
-:root {
-  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
 body {
+ font-family: "Montserrat", sans-serif;
+  background: #f5f5f5;
   display: flex;
-  flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
 }
 
 main {
-  flex-grow: 1;
+  background: #fff;
+  padding: 36px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-main:has(.back-link) {
+
+#datetime-picker {
+  padding: 8px 16px;
+  font-size: 16px;
+ border: 1px solid #808080;
+border-radius: 4px;
+width: 237px;
+height: 21px;
+background: #fff;
+line-height: 1.5;
+letter-spacing: 0.04em;
+}
+#datetime-picker.disabled {
+  background: #fafafa;
+}
+#datetime-picker:hover {
+  border: 1px solid #000;
+}
+button[data-start] {
+  padding: 16px 8px;
+  font-size: 16px;
+  color: #fff;
+  margin-left: 8px;
+  background: #4e75ff;
+  border-radius: 8px;
+padding: 8px 16px;
+width: 75px;
+height: 40px;
+font-weight: 500;
+line-height: 1.5;
+letter-spacing: 0.04em;
+  
+  cursor: pointer;
+}
+button[data-start]:hover {
+  background: #6c8cff;
+}
+
+button[data-start]:disabled {
+  background: #cfcfcf;
+  color: #989898;
+  cursor: pointer;
+}
+
+.timer {
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+  margin-top: 32px;
+  width: 346px;
+  height: 72px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+
+}
+
+.value {
+ font-weight: 400;
+font-size: 40px;
+
+
+line-height: 1.2;
+letter-spacing: 0.04em;
+color: #2e2f42;
+}
+
+.label {
+ font-weight: 400;
+font-size: 16px;
+
+
+line-height: 1.5;
+color: #2e2f42;
 }
